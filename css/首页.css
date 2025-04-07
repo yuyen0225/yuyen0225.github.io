@@ -1,0 +1,130 @@
+.all,.footer{
+	width:100%;
+	height:790px;
+	background-color:#000;
+	background-repeat: repeat-x;
+	font-family: "宋体";
+	position: relative;
+	color:#fff;
+}
+.all .text li{
+	width: 50px;
+	height: 290px;
+	font-size: 55px;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top:50px;
+	font-weight:bolder;
+	z-index:10;
+	position: absolute;
+	opacity:0;
+}
+.all .text li:nth-child(1){
+	top:4%;
+	left:14%;
+	animation:one 2s ease-in-out forwards 0.2s;
+}
+.all .text li:nth-child(2){
+	top:8%;
+	left:29%;
+	animation:one 2s ease-in-out forwards 0.4s;
+}
+.all .text li:nth-child(3){
+	top:5%;
+	right:30%;
+	animation:one 2s ease-in-out forwards 0.6s;
+}
+.all .text li:nth-child(4){
+	top:14%;
+	right:14%;
+	animation:one 2s ease-in-out forwards 0.8s;
+}
+.all .square li{
+	float: left;
+	background-color:#681616;
+	position: absolute;
+	z-index:5;
+	opacity:0;
+}
+.all .square li:nth-child(1){
+	width:85px;
+	height:308px;
+	top:0;
+	left:15%;
+	animation:one 2s ease-in-out forwards 0.2s;
+}
+.all .square li:nth-child(2){
+	width:65px;
+	height:380px;
+	top:0;
+	left:30%;
+	animation:one 2s ease-in-out forwards 0.4s;
+}
+.all .square li:nth-child(3){
+	width:90px;
+	height:314px;
+	top:0;
+	right:30%;
+	animation:one 2s ease-in-out forwards 0.6s;
+}
+.all .square li:nth-child(4){
+	width:62px;
+	height:411px;
+	top:0;
+	right:15%;
+	animation:one 2s ease-in-out forwards 0.8s;
+}
+.all .top{
+	position: absolute;
+	top:0;
+	left:15%;
+}
+.all .center{
+	position: absolute;
+	top:40%;
+	left:20%;
+}
+.all .bottom{
+	position: absolute;
+	bottom:0;
+	left:5%;
+}
+a{
+	color:#fff;
+	text-decoration:none;
+}
+a:hover{
+	color:#163968;
+}
+@keyframes one{
+	from{
+		top:-50px;
+	}
+	to{
+		opacity:1;
+	}
+}
+.footer{
+	background-color:#681616;
+}
+.footer video{
+	width:745px;
+	height:404px;
+	position: absolute;
+	top:10%;
+	left:25%;
+	border:15px solid #000;
+}
+.footer .text{
+	font-size:18px;
+	line-height:28px;
+	display:flex;
+	justify-content:center;
+	text-align:center;
+	align-items:center;
+	flex-direction:column;
+	position: absolute;
+	bottom:2%;
+	left:32%;
+}
