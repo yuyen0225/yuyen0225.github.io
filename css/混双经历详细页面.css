@@ -1,0 +1,819 @@
+.page1,.page2,.page3,.page4,.page5,.page6,.page7,.page8{
+	width:100%;
+	height:768px;
+	background-repeat: repeat-x;
+	font-family: "宋体";
+	font-weight:bolder;
+	position: relative;
+}
+/* 第一页样式 */
+.page1{
+	background-image: url(../img/page1.bg.png);
+}
+.page1 .text1 li{
+	font-size:32px;
+}
+.page1 .text1 li,.page1 .tupian1 li{
+	float: left;
+	margin-left: 100px;
+	text-align: center;
+	line-height:45px;
+}
+.page1 .text1 li{
+	margin-right:130px;
+}
+.page1 .tupian1 li{
+	margin-right:150px;
+	}
+.page1 .tupian1 img{
+	width:165px;
+	height:165px;
+	border-radius:50%;
+	transition: transform 0.3s ease;
+}
+.page1 .tupian1 img:hover{
+	  transform: scale(1.3);
+}
+.page1 .text2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 46px;
+	color: white;
+	font-family: monospace;
+	position: absolute;
+	bottom:25%;
+	left:25%;
+}
+.page1 .text2 p::after,.page1 .text2 p::before{
+	content: '';
+	position: absolute;
+	inset: 0;
+}
+.page1 .text2 p::before{
+	background-color:#681616;
+	animation: typing 4s steps(15) 500ms forwards;
+}
+.page1 .text2 p::after{
+	width:4px;
+	background-color: black;
+	animation: typing 4s steps(15) 500ms forwards,belink 800ms infinite;
+}
+@keyframes belink{
+	from,to{
+		background-color: transparent;
+	}
+	50%{
+		background-color: #fff;
+	}
+}
+@keyframes typing{
+	to{
+		left: 100%;
+	}
+}
+.page1 .text1{
+	position: absolute;
+	top:20%;
+	left:10%;
+}
+.page1 .tupian1{
+	position: absolute;
+	top:35%;
+	left:10%;
+}
+/* 第二页样式 */
+.page2{
+	background-image: url(../img/page2.bg.png);
+	}
+.page2 .square1{
+	position: absolute;
+	top:8%;
+	left:2%;
+	width: 23px;
+	height: 60px;
+	background-color: #681616;
+}	
+.page2 .left{
+	position: absolute;
+	top:10%;
+	left:4%;
+	color: #6b2727;
+}
+.page2 .square2 li{
+	width: 145px;
+	height: 145px;
+	background-color: #681616;
+	font-size: 38px;
+	color: #fff;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top:50px;
+}
+.page2 .square2 li:nth-child(1){
+	position: absolute;
+	top:13%;
+	left:30%;
+}
+.page2 .square2 li:nth-child(2){
+	position: absolute;
+	top:36%;
+	right: 12%;
+}
+.page2 .square2 li:nth-child(3){
+	position: absolute;
+	bottom:29%;
+	left: 22%;
+}
+.page2 .square2 li:nth-child(4){
+	position: absolute;
+	bottom:9%;
+	right: 20%;
+}
+.page2 .text3 li{
+	font-size: 28px;
+	color: #fff;
+	float: left;
+	text-align: center;
+}
+.page2 .text3 li:nth-child(1){
+	position: absolute;
+	top:21%;
+	left:43%;
+}
+.page2 .text3 li:nth-child(2){
+	position: absolute;
+	top:43%;
+	right:24%;
+}
+.page2 .text3 li:nth-child(3){
+	position: absolute;
+	bottom:36%;
+	left:33%;
+}
+.page2 .text3 li:nth-child(4){
+	position: absolute;
+	bottom:13%;
+	right:30%;
+}
+.page2 .lunbo1{
+	width:600px;
+	height:400px
+	margin:0 auto;
+	overflow:hidden;
+	position: absolute;
+	bottom:-10%;
+	left:30%;
+}
+.page2 .lunbo1 ul{
+	width:1800px;
+	height:400px;
+	animation:lunbo 6s linear infinite;
+}
+.page2 .lunbo1 ul li{
+	float:left;
+}
+.page2 .lunbo1 ul li img{
+	width:300px;
+    height:400px;
+}
+.page2 .lunbo1 ul:hover{
+	animation-play-state:paused;
+}
+.page2 .lunbo1 ul:hover li{
+	opacity:0.5
+}
+.page2 .lunbo1 ul li:hover{
+	opacity:1;
+}
+@keyframes lunbo{
+	0%{
+	    margin-left:0px;
+		}
+	100%{
+		margin-left:-1200px;
+		}
+}
+/* 第三页样式 */
+.page3{
+	background-image: url(../img/page3.bg.png);
+}
+.page3 .right{
+	position: absolute;
+	top:30%;
+	right:18%;
+}
+.page3 .right1{
+	position: absolute;
+	top:48%;
+	right:13%;
+	font-size:20px;
+	line-height:30px;
+}
+.page3 .right2{
+	position: absolute;
+	bottom:10%;
+	right:13%;
+	font-size:30px;
+	color:#6b2727;
+}
+.page3 .fan-zhuan{
+	ransition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+.page3 .fan-zhuan.flipped {
+    transform: rotateY(180deg);
+}
+.page3 .fan-zhuan .front,.page3 .fan-zhuan .back{
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page3 .fan-zhuan .back{
+	transform: rotateY(180deg);
+}
+.page3 .front img,.page3 .back img{
+	position: absolute;
+	margin-top: 40%;
+	left: 10%;
+    width:545px;
+    height:434px;
+}
+/* 第四页样式 */
+.page4{
+	background-image: url(../img/page4.bg.png);
+}
+.page4 .right3{
+	position: absolute;
+	top:20%;
+	right:22%;
+	color:#6b2727;
+}
+.page4 .right4{
+	position: absolute;
+	top:30%;
+	right:45%;
+	color:#fff;
+}
+.page4 .right5{
+	position: absolute;
+	bottom:35%;
+	right:25%;
+	color:#fff;
+	font-size:18px;
+	line-height:25px;
+}
+.page4 .left1{
+	position: absolute;
+	bottom:10%;
+	left:13%;
+}
+.page4 .left2{
+	position: absolute;
+	bottom:50%;
+	left:13%;
+	font-size:25px;
+	line-height:30px;
+	color:#fff;
+}
+.page4 .left1 .fanzhuan1{
+	width:393px;
+	height:598px;
+	transition:1s;
+	backface-visibility:hidden;
+}
+.page4 .left1:hover .fanzhuan1{
+	transform:rotateY(-180deg);
+}
+.page4 .left1 .fanzhuan2{
+	transform:rotateY(180deg);
+	transition:0.5s;
+	backface-visibility:hidden;
+}
+.page4 .left1:hover .fanzhuan2{
+	transform:rotateY(0deg);
+}
+/* 第五页样式 */
+.page5{
+	background-image: url(../img/page5.bg.png);
+}
+.page5 .left3 li{
+	background-color:#681616;
+}
+.page5 .left3 li:nth-child(1){
+	width:150px;
+	height:238px;
+	position: absolute;
+	top:10%;
+	left:0;
+}
+.page5 .left3 li:nth-child(2){
+	width:10px;
+	height:238px;
+	position: absolute;
+	top:10%;
+	left:11%;
+}
+.page5 .left3 li:nth-child(3){
+	width:50px;
+	height:265px;
+	position: absolute;
+	top:45%;
+	left:4%;
+	font-size:30px;
+	text-align: center;
+	background-color:#100d0b;
+	color:#6b2727;
+}
+.page5 .bottom{
+	width:100%;
+	height:59px;
+	background-color:#681616;
+	position: absolute;
+	bottom:5%;
+	text-align: center;
+	line-height:55px;
+	color:#fff;
+}
+.page5 .right6,.page5 .right7{
+	display: flex;
+	ustify-content: center;
+	align-items: center;
+	width:480px;
+	height: 215px;
+	background-color: #681616;
+	margin: 50px 5px;
+	padding: 20px 15px;
+	border-radius: 5px;
+	box-shadow: 0 5px 200px rgba(0,0,0,0.5);
+	transition: 0.3s ease-in-out;
+
+}
+.page5 .right6{
+	position:absolute;
+	top:10%;
+	left:20%;
+}
+.page5 .right7{
+	position:absolute;
+	top:10%;
+	left:60%;
+}
+.page5 .right6:hover,.page5 .right7:hover{
+	height: 420px;
+}
+.page5 .right6 .img-box,.page5 .right7 .img-box{
+    position: relative;
+    width: 381px;
+    height:242px;
+    border-radius: 5px;
+    overflow: hidden;
+    top: -60px;
+    left: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.page5 .right6 .img-box img,.page5 .right7 .img-box img{
+  width:100%;
+}
+.page5 .right6 .text-box,.page5 .right7 .text-box{
+    position: relative;
+    margin-top:-140px;
+    padding: 50px 30px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.page5 .right6 .text-box h2,.page5 .right7 .text-box h2{
+	color: #fff;
+}
+.page5 .right6 .text-box p,.page5 .right7 .text-box p{
+    text-align: left;
+    line-height: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+	color: #fff;
+}
+.page5 .right6:hover .text-box,.page5 .right7:hover .text-box{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.2s;
+}
+/* 第六页样式 */
+.page6{
+	background-image: url(../img/page6.bg.png);
+}
+.page6 .all li{
+	background-color:#fff;
+}
+.page6 .all li:nth-child(1){
+	position: absolute;
+	width:352px;
+	height:80px;
+	top:0;
+	right:25%;
+}
+.page6 .all li:nth-child(2){
+	position: absolute;
+	width:352px;
+	height:8px;
+	top:12%;
+	right:25%;
+}
+.page6 .all li:nth-child(3){
+	position: absolute;
+	width:300px;
+	height:52px;
+	top:20%;
+	left:30%;
+	font-size:28px;
+	line-height:50px;
+	text-align: center;
+	background-color:#681616;
+	letter-spacing:1px;
+}
+.page6 img{
+	width:353px;
+	height:533px;
+	position: absolute;
+	top:14%;
+	right:25%;
+}
+.page6 .right8{
+	font-size:14px;
+	color:#fff;
+	position: absolute;
+	bottom:2%;
+	right:22%;
+	line-height:18px;
+}
+.page6 .center{
+	height:70px;
+	width:560px;
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom:40%;
+	left:13%;
+}
+.page6 section{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.page6 section .liekai{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page6 section .liekai .text4{
+    color: #fff;
+    font-size: 30px;
+    top: 0;
+    opacity: 1;
+    transition: top 0.5s,opacity 0.5s;
+}
+/* 切割文字 */
+.page6 section .liekai .text4:nth-child(1){
+    position: absolute;
+    clip-path: polygon(0% 0%,100% 0%,100% 51%,0% 51%);
+}
+.page6 section .liekai .text4:nth-child(2){
+    position: relative;
+    clip-path: polygon(0% 50%,100% 50%,100% 100%,0% 100%);
+}
+/* 触发景深效果 */
+section:hover .liekai{
+    filter: blur(10px);
+    transform: scale(0.8);
+    transition: filter 0.5s,transform 0.5s;
+}
+/* 对应的取消景深效果 */
+section .liekai:hover{
+    filter: blur(0px);
+    transform: scale(1);
+    transition: filter 0.5s,transform 0.5s;
+}
+/* 上半部分上移并变淡 */
+section .liekai:hover .text4:nth-child(1){
+    top: -40px;
+    opacity: 0.5;
+    transition: top 0.5s,opacity 0.5s;
+}
+/* 下半部分下移并变淡 */
+section .liekai:hover .text4:nth-child(2){
+    top: 40px;
+    opacity: 0.5;
+    transition: top 0.5s,opacity 0.5s;
+}
+/* 裂开后显示的文字 */
+section .liekai a{
+    position: absolute;
+    color: #fff;
+	font-size:20px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+section .liekai a:hover{
+    color:#681616;
+}
+section .liekai:hover a{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+/* 第七页样式 */
+.page7{
+	background-image: url(../img/page7.bg.png);
+	box-sizing: border-box;
+}
+.page7 .right9{
+	width:856px;
+	height:254px;
+	position: absolute;
+	top:20%;
+	left:30%;
+	background-color:#fff;
+}
+.page7 .right9 li{
+	float:left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size:20px;
+	margin-left:80px;
+	margin-top:130px;
+	line-height:25px;
+	opacity:0;
+}
+.page7 .right10{
+	position: absolute;
+	top:28%;
+	left:30%;
+}
+.page7 .right10 li{
+	float:left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size:25px;
+	color:#fff;
+	background:#681616;
+	width:62px;
+	height:47px;
+	margin:10px 80px;
+	opacity:0;
+}
+.page7 .right10 li:nth-child(2){
+	margin-left:130px;
+}
+.page7 .left4{
+	width:856px;
+	height:254px;
+	position: absolute;
+	bottom:10%;
+	left:10%;
+	background-color:#fff;
+}
+.page7 .left4 li{
+	float:left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size:20px;
+	margin-left:60px;
+	margin-top:130px;
+	line-height:25px;
+	opacity:0;
+}
+.page7 .left5{
+	position: absolute;
+	bottom:28%;
+	left:9%;
+}
+.page7 .left5 li{
+	float:left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size:25px;
+	color:#fff;
+	background:#681616;
+	width:62px;
+	height:47px;
+	margin:10px 80px;
+	opacity:0;
+}
+.page7 .left5 li:nth-child(2){
+	margin-left:190px;
+}
+.page7 .left5 li:nth-child(3){
+	margin-left:60px;
+}
+.page7 .right9 li:nth-child(1),.page7 .right10 li:nth-child(1){
+	animation:one 2s ease-in-out forwards 0.4s;
+}
+.page7 .right9 li:nth-child(2),.page7 .right10 li:nth-child(2){
+	animation:one 2s ease-in-out forwards 0.8s;
+}
+.page7 .right9 li:nth-child(3),.page7 .right10 li:nth-child(3){
+	animation:one 2s ease-in-out forwards 1.2s;
+}
+.page7 .left4 li:nth-child(1),.page7 .left5 li:nth-child(1){
+	animation:one 2s ease-in-out forwards 1.6s;
+}
+.page7 .left4 li:nth-child(2),.page7 .left5 li:nth-child(2){
+	animation:one 2s ease-in-out forwards 2s;
+}
+.page7 .left4 li:nth-child(3),.page7 .left5 li:nth-child(3){
+	animation:one 2s ease-in-out forwards 2.4s;
+}
+@keyframes one{
+	to{
+		opacity:1;
+		}
+}
+.page7 .left6{
+	position: absolute;
+	top:-570%;
+	left:-2%;
+	width:300px;
+	height:300px;
+}
+.page7 .left6 img{
+	transition: all 0.5s;
+}
+.page7 .left6 img:hover{
+	transform:scale(0.9);
+}
+.page7 .right11{
+	position: absolute;
+	top:-60%;
+	right:-60%;
+	width:300px;
+	height:300px;
+	overflow:hidden;
+}
+.page7 .right11 img{
+	transition: all 0.5s;
+	}
+.page7 .right11 img:hover{
+	transform:scale(1.2);
+}
+/* 第八页样式 */
+.page8{
+	background-image: url(../img/page8.bg.png);
+}
+.page8 .right12{
+	width:355px;
+	height:136px;
+	position: absolute;
+	top:10%;
+	right:0;
+	font-size:20px;
+	line-height:130px;
+	text-align: center;
+	color:#681616;
+	background-color:#000;
+}
+.page8 .right13{
+	font-size:35px;
+	color:#fff;
+}
+.page8 .right13 li:nth-child(1){
+	position: absolute;
+	top:12%;
+	right:30%;
+}
+.page8 .right13 li:nth-child(2){
+	position: absolute;
+	top:32%;
+	right:21%;
+}
+.page8 .right13 li:nth-child(3){
+	position: absolute;
+	top:50%;
+	right:12%;
+}
+.page8 .right14{
+	font-size:25px;
+	color:#fff;
+}
+.page8 .right14 li:nth-child(1){
+	position: absolute;
+	top:17%;
+	right:33%;
+}
+.page8 .right14 li:nth-child(2){
+	position: absolute;
+	top:37%;
+	right:25%;
+}
+.page8 .right14 li:nth-child(3){
+	position: absolute;
+	top:53%;
+	right:18%;
+}
+.page8 .left7{
+	width:455px;
+	height:100%;
+	position: absolute;
+	left:10%;
+}
+.page8 .left8,.page8 .left9{
+	width:55px;
+	height:100%;
+}
+.page8 .left8{
+	position: absolute;
+	left:8%;
+	opacity:0;
+	animation:two 2s ease-in-out forwards;
+}
+.page8 .left9{
+	position: absolute;
+	left:38%;
+	opacity:0;
+	animation:two 2s ease-in-out forwards 1s;
+}
+@keyframes two{
+	from{
+		bottom:-1000px;
+	}
+	to{
+		opacity:1;
+		bottom:0;
+	}
+}
+.page8 .right15{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 溢出隐藏 */
+    overflow: hidden;
+	position: absolute;
+	bottom:15%;
+	right:13%;
+}
+.page8 .right15 h2{
+    display: flex;
+    font-size: 60px;
+	letter-spacing:1px;
+    color: #fff;
+    text-align: center;
+}
+.page8 .right15 h2 span{
+    transition: 1.5s;
+}
+.page8 .right15 h2:hover span{
+    /* 模糊 */
+    filter: blur(20px);
+    /* 不透明度 */
+    opacity: 0;
+    /* 放大 */
+    transform: scale(2);
+}
+/* 每一个span元素设置动画延迟时间 */
+.page8 .right15 h2 span:nth-child(1){
+    transition-delay: 0.1s;
+}
+.page8 .right15 h2 span:nth-child(2){
+    transition-delay: 0.2s;
+}
+.page8 .right15 h2 span:nth-child(3){
+    transition-delay: 0.3s;
+}
+.page8 .right15 h2 span:nth-child(4){
+    transition-delay: 0.4s;
+}
+.page8 .right15 h2 span:nth-child(5){
+    transition-delay: 0.5s;
+}
+.page8 .right15 h2 span:nth-child(6){
+    transition-delay: 0.6s;
+}
+.page8 .right15 h2 span:nth-child(7){
+    transition-delay: 0.7s;
+}
+.page8 .right15 h2 span:nth-child(8){
+    transition-delay: 0.8s;
+}
+.page8 .left10{
+	user-select: none;
+	position: absolute;
+	bottom:5%;
+	right: 26%;
+}
+.page8 .left10 img{
+    width: 40px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
