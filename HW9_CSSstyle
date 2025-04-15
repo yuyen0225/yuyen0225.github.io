@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<style>
+.orange-shadow {
+font-size: 48px;
+color: black;
+text-shadow: 3px 3px 5px orange;
+}
+</style>
+</head>
+<body>
+<div class="orange-shadow">hi world～</div>
+</body>
+</html>
