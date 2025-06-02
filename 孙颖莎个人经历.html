@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>孙颖莎 个人经历</title>
+		<link rel="icon" type="image/-icon" href="img/图标.ico"/>
+		<style>
+			.all {
+			    width: 100%;
+			    height: 100%;
+			    display: flex;
+			    overflow-x: hidden;
+			    font-family: "微软雅黑";
+			}
+			.main {
+			    position: absolute;
+			    top: 0;
+			    left: 50%;
+			    transform: translate(-50%, 0);
+			    width: 700px;
+			    height: 9830px;
+				
+			    &::before {
+			        content: "";
+			        position: absolute;
+			        inset: 0 -30vw;
+			        background: linear-gradient(#000, #bc4623, #681616);
+			    }
+			}
+			/* 线和箭头 */
+			.xianhejiantou {
+			    position: absolute;
+			    top: 0;
+			    left: 50%;
+			    width: 700px;
+			    height:9820px;
+			    transform: translate(-50%, 0);
+			}
+			#xian {
+			    stroke-dasharray: 11290, 11290;
+			    animation: lineMove 3s linear;
+			    animation-timeline: scroll(root);
+			    stroke-width: 2px;
+			    stroke: #ff5722;
+				position: absolute;
+				z-index: 5;
+			}
+			@keyframes lineMove {
+			    0% {
+			        stroke-dashoffset: 11290;
+			    }
+			    100% {
+			        stroke-dashoffset: 0;
+			    }
+			}
+			.jiantou {
+			    position: absolute;
+			    width: 40px;
+			    height: 40px;
+			    clip-path: polygon(0 0, 100% 50%, 0 100%);
+			    offset-path: path("M 350 40 C 1200 1000, -550 1000, 350 1960 c 900 1000, -900 1000, 0 1960 c 900 1000, -900 1000, 0 1960 c 900 1000, -900 1000, 0 1960 c 900 1000, -900 1000, 0 1960");
+			    background: linear-gradient(270deg, #484848, #FF5722);
+			    animation: move 1s linear;
+			    animation-timeline: scroll(root);
+			    z-index: 10;
+			}
+			@keyframes move {
+			    0% {
+			        offset-distance: 0%;
+			    }
+			    50% {
+			        transform: scale(2.5);
+			    }
+			    100% {
+			        offset-distance: 100%;
+			    }
+			}
+			/* 发光圆圈 */
+			.point {
+			    position: absolute;
+			    width: 40px;
+			    height: 40px;
+			    border-radius: 50%;
+			    background: #ff5722;
+			    opacity: 0;
+			    animation: show 1s linear forwards;
+			    animation-timeline: scroll(root);
+			    &::before, &::after {
+			        content: "";
+			        position: absolute;
+			        inset: 0;
+			        border-radius: 50%;
+			        background: rgba(255, 255, 255, .5);
+			        animation: circleScale 2s infinite ease-in;
+			        z-index: -1;
+			    }
+			    &::after {
+			        animation-delay: -.5s;
+			    }
+			}
+			@keyframes show {
+			    0% {
+			        opacity: 0;
+			    }
+			    100% {
+			        opacity: 1;
+			    }
+			}
+			@keyframes circleScale {
+			    80%,
+			    100% {
+			        transform: scale(4);
+			        opacity: 0.1;
+			    }
+			}
+			.point1 {
+			    top: 510px;
+			    left: 570px;
+			    animation-range: 150px 200px;
+			}
+			.point2 {
+			    top: 940px;
+			    left: 345px;
+			    animation-range: 400px 450px;
+			}
+			.point3 {
+			    top: 1410px;
+			    left: 66px;
+			     animation-range: 700px 800px;
+			}
+			.point4 {
+			    top: 1900px;
+			    left: 290px;
+			   animation-range: 1250px 1350px;
+			}
+			.point5 {
+			    top: 2510px;
+			    left: 585px;
+			    animation-range: 1750px 1850px;
+			}
+			.point6 {
+			    top:3050px;
+			    left: 230px;
+			    animation-range: 2350px 2450px;
+			}
+			.point7 {
+			    top: 3550px;
+			    left: 97px;
+			    animation-range: 2850px 2950px;
+			}
+			.point8 {
+			    top: 4300px;
+			    left: 573px;
+			    animation-range: 3600px 3700px;
+			}
+			.point9 {
+			    top: 4800px;
+			    left: 415px;
+			    animation-range: 4100px 4200px;
+			}
+			.point10 {
+			    top: 5350px;
+			    left: 70px;
+			    animation-range: 4650px 4750px;
+			}
+			.point11 {
+			    top: 5900px;
+			    left: 363px;
+			    animation-range: 5250px 5350px;
+			}
+			.point12 {
+			    top: 6400px;
+			    left: 588px;
+			    animation-range: 5800px 5900px;
+			}
+			.point13 {
+			    top: 7500px;
+			    left: 108px;
+			    animation-range: 6850px 6950px;
+			}
+			.point14 {
+			    top: 8250px;
+			    left: 580px;
+			    animation-range: 7650px 7750px;
+			}
+			.point15 {
+			    top: 9200px;
+			    left: 78px;
+			    animation-range: 8550px 8650px;
+			}
+			.point16 {
+			    top: 9725px;
+			    left: 278px;
+			    animation-range: 8550px 8650px;
+			}
+			/* 字和框 */
+			h2 {
+			    position: absolute;
+			    left: 0;
+			    right: 0;
+			    text-align: center;
+			    top: 100px;
+			    font-size: 42px;
+			    color: #fff;  
+			}
+			p {
+			    position: absolute;
+			    padding: 16px;
+			    border: 4px dashed #fff;
+			    width: 50vw;
+			    color: #fff;
+			    font-size: 24px;
+			    text-align: center;
+				font-weight: 600;
+			    opacity: 0;
+			    animation: textShow 5s linear forwards;
+			    animation-timeline: scroll(root);
+			}
+			@keyframes textShow {
+			    0% {
+			        transform: translate(var(--x), 0);
+			        opacity: 0;
+			    }
+			    100% {
+			        transform: translate(0, 0);
+			        opacity: 1;
+			    }
+			}
+			
+			.p1 {
+			    --x: -500px;
+			    top: 410px;
+			    left: 60px;
+			    width: 400px;
+			    animation-range: 150px 200px;
+			}
+			.p2 {
+			    --x: -150px;
+			    width: 500px;
+			    top: 880px;
+			    left: 300px;
+			    animation-range: 350px 450px;
+			}
+			/* 为穿过框的线让位 */
+			.p2::before {
+			    content: "";
+			    float: left;
+			    width: 240px;
+			    height: 200px;
+			    shape-outside: polygon(80% 0, 90% 0, 0 90%, 0 80%);
+			}
+			.p3 {
+			    --x: 500px;
+			    top: 1350px;
+			    left: 190px;
+			    width: 450px;
+			    animation-range: 700px 800px;
+			}
+			.p4{
+				--x: -700px;
+				width: 500px;
+				top: 1850px;
+				left: -180px;
+				animation-range: 1150px 1250px;
+				text-align: center;
+			}
+			.p4::before {
+			    content: "";
+			    float: right;
+			    width: 200px;
+			    height: 100px;
+			    shape-outside: polygon(40% 0, 50% 0, 100% 90%, 100% 100%);
+			}
+			.p5{
+				--x: -500px;
+				top: 2350px;
+				left: -50px;
+				width:500px;
+				animation-range: 1700px 1800px;
+				text-align: left;
+			}
+			.p6{
+				--x: 1000px;
+				top: 3000px;
+				left: 350px;
+				width: 650px;
+				animation-range: 2300px 2400px;
+			}
+			.p7{
+				--x: 700px;
+				width: 800px;
+				top: 3500px;
+				left: 250px;
+				animation-range: 2800px 2900px;
+				text-align: left;
+			}
+			.p7::before{
+				content: "";
+				float: left;
+				width: 200px;
+				height: 420px;
+				shape-outside: polygon(50% 100%, 70% 100%, 0% 80%, 0% 90%);
+			}
+			.p8{
+				--x: -500px;
+				top: 4070px;
+				left: -150px;
+				width:500px;
+				animation-range: 3400px 3500px;
+				text-align: left;
+				}
+			.p9{
+				--x: -500px;
+				top: 4600px;
+				left: -380px;
+				width:700px;
+				animation-range: 3900px 4000px;
+				text-align: left;
+			}
+			.p10{
+				--x: 700px;
+				width: 710px;
+				top: 5250px;
+				left: 250px;
+				animation-range: 4600px 4700px;
+				text-align: left;
+			}
+			.p11{
+				--x: -500px;
+				top: 5800px;
+				left: -280px;
+				width:700px;
+				animation-range: 5200px 5300px;
+				text-align: left;
+			}
+			.p11::before{
+				content: "";
+				float: right;
+				width: 130px;
+				height: 420px;
+				shape-outside: polygon(0% 0%, 20% 0%, 100% 30%, 80% 30%);
+			}
+			.p12{
+				--x: -500px;
+				top: 6350px;
+				left: -300px;
+				width:720px;
+				animation-range: 5800px 5900px;
+				text-align: left;
+			}
+			.p13{
+				--x: 700px;
+				width: 720px;
+				top: 7400px;
+				left: 250px;
+				animation-range: 6800px 6900px;
+				text-align: left;
+			}
+			.p14{
+				--x: -500px;
+				top: 8150px;
+				left: -300px;
+				width:720px;
+				animation-range: 7650px 7750px;
+				text-align: left;
+			}
+			.p15{
+				--x: 700px;
+				width: 720px;
+				top: 9080px;
+				left: 230px;
+				animation-range: 8450px 8550px;
+				text-align: left;
+			}
+			.p16{
+				--x: 700px;
+				width: 280px;
+				top: 9680px;
+				left: 400px;
+				animation-range: 9000px 9100px;
+				border: 4px solid #fff;
+				border-radius: 40px;
+				font-weight: 400;
+				background-color: rgba(225, 225, 225, 0.5);
+			}
+			.main p img{
+				width: 300px;
+			}
+			/* 链接到 */
+			.lianjie{
+				width: 300px;
+				height: 400px;
+			}
+			/* 返回首页 */
+			.return {
+				position:fixed;
+				height: 60px;
+				width: 100px;
+				top: 600px;
+				right: 0px;
+				/* border: 2px outset #681616; */
+				border-radius: 40px 0 0 40px;
+				font-size: 20px;
+				font-weight: 200;
+				overflow: hidden;
+				background-color: rgba(0, 0, 0, 1);
+				text-indent: 0.5em;
+				transition: all 0.5s;
+			}
+			.return img{
+				margin: 0px 0 0 -15px;
+				width: 110.5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="all">
+		<div class="main">
+		    <svg class="xianhejiantou" xmlns="http://www.w3.org/2000/svg">
+		        <path id="xian" d="M 350 40 C 1200 1000, -550 1000, 350 1960 
+				c 900 1000, -900 1000, 0 1960 
+				c 900 1000, -900 1000, 0 1960 
+				c 900 1000, -900 1000, 0 1960 
+				c 900 1000, -900 1000, 0 1960 
+				" stroke="black" fill="transparent" />
+		    </svg>
+		    <div class="jiantou"></div>
+			
+		    <div class="point point1"></div>
+		    <div class="point point2"></div>
+		    <div class="point point3"></div>
+			<div class="point point4"></div>
+			<div class="point point5"></div>
+			<div class="point point6"></div>
+			<div class="point point7"></div>
+			<div class="point point8"></div>
+			<div class="point point9"></div>
+			<div class="point point10"></div>
+			<div class="point point11"></div>
+			<div class="point point12"></div>
+			<div class="point point13"></div>
+			<div class="point point14"></div>
+			<div class="point point15"></div>
+			<div class="point point16"></div>
+		    <h2>孙颖莎个人经历</h2>
+		    <p class="p1">
+			5岁开始学习乒乓球。<br/><br/><img src="img/2_1.jpg"/>
+		    </p>
+		    <p class="p2">
+			10岁进入河北队。<br/><br/>
+			<img src="img/2_2.jpg"/>
+		    </p>
+		    <p class="p3">
+			2014年获得亚洲青少年锦标赛单打冠军。<br/><br/>
+			<img src="img/2_3.jpg" />
+		    </p>
+			<p class="p4">
+				2015年获得全国少年赛冠军。
+			<img src="img/2_4.jpg" style="margin-right: 60px;"/></p>
+			<p class="p5">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017 年 1 月进入国家一队；6 月，首次参加国际成人赛--日本公开赛，出道即双冠， 21 天从无积分空降世排前十；7 月，亚青赛获得了女单、女双、女团、混双冠军，获得了人生中第一个四冠王称号。
+			<br/><br/>
+			<img src="img/2_5.jpg" style="margin-left:90px;"/>
+			</p>
+			<p class="p6">
+				2018 年雅加达亚运会女团和混双冠军。<br/><br/>
+			<img src="img/2_6.jpg" />
+			<img src="img/2_7.jpg" />
+			</p>
+			<p class="p7">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019 年全国锦标赛女单冠军、亚锦赛女单冠军，世界杯团体赛上，临危受命扛起一单绝地逆转日本头号外协伊藤美诚。同年，成为女乒全年胜率最高的选手，世排跃升第二。
+				<br/><br/>
+				<img src="img/2_8.jpg" style="margin-left:40px;"/ >
+				<img src="img/2_9.jpg" />
+			</p>
+			<p class="p8">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020 年，获 WTT 澳门国际乒乓球女单冠军，是 WTT 历史上首位冠军。<br/><br/>
+			<img src="img/2_10.jpg" style="margin-left:99px;"/>
+			</p>
+			<p class="p9">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20 岁首登奥运，孙颖莎在东京奥运会女单半决赛力顶千钧，成功狙击零封刚夺得混双金牌势头正盛的最大对手伊藤美诚，振奋人心提升了整个球队的士气，在后面的团体赛年龄最小的孙颖莎又抗起了一单，实现了对日本女乒一号的“双杀”，“人间止藤片”的名号响彻全国。最终获得女单亚军、女团冠军。
+				<br/><br/>
+				<img src="img/2_11.jpg" style="margin-left:45px;"/ >
+				<img src="img/2_12.jpg" />
+			</p>
+			<p class="p10">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021 年 11 月获得休斯顿世乒赛女单亚军、女双冠军、混双冠军。曾一日四战，四站全胜；12 月获得 WTT 世界杯女单冠军。
+				<br/><br/>
+				<img src="img/2_13.jpg" style="margin-left:50px;"/ >
+				<img src="img/2_14.jpg" />
+			</p>
+			<p class="p11">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022 年 1 月成为首位“ 00 后”单打世界第一。同年，获得成都世乒赛女团冠军，并蝉联 WTT 世界杯决赛女单冠军。
+				<br/><br/>
+				<img src="img/2_15.jpg" style="margin-left:45px;"/ >
+				<img src="img/2_16.jpg" />
+			</p>
+			<p class="p12">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2023 年获得 WTT 新加坡大满贯女单、女双、混双三项冠军，成为 WTT 大满贯赛史上首位“三冠王”；5 月，获得德班世乒赛女单冠军、混双冠军，成为世乒赛历史上首位 00 后单打冠军，成就世乒赛金满贯；9 月，杭州亚运会开幕式与郑思维代表全体运动员宣誓。国庆当日面对队友失守，顶住压力横扫日乒一姐早田希娜，成为亚运会女单、女团及混双三冠王。12 月， WTT 名古屋女子总决赛。7 小时四赛19 局180 分钟，如此紧密的赛程仍四场全胜，获得女单冠军、女双冠军，实现总决赛三连冠。
+				<br/><br/>
+				<img src="img/2_17.jpg" style="margin-left:55px;"/ >
+				<img src="img/2_18.jpg" />
+				<img src="img/2_19.jpg" style="margin-left:55px;"/ >
+				<img src="img/2_20.jpg" />
+			</p>
+			<p class="p13">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024 年 1 月 1 日，国际体育记者协会（ AIPS ）公布 2023年最佳女运动员，孙颖莎成为唯一一个入选榜单的中国运动员；2 月 26 日，孙颖莎成为 2023年国际乒联最佳女运动员；3 月 7 日，孙颖莎入围巴黎奥运会最值得关注女运动员【唯一亚洲女性】2024 年 2 月釜山世乒赛，元宵团圆节当天顶着前面两个队友失利的重压，再次挺身而出。“受任于败军之际，奉命于危难之间”。连斩日本一单二单助力女乒六连冠。荣膺团体赛最佳女运动员。3月，三项世界排名均为第一。
+				<br/><br/>
+				<img src="img/2_21.jpg" style="margin-left:295px;"/>
+			</p>
+			<p class="p14">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024 年 4 月澳门世界杯上，孙颖莎与王曼昱鏖战七局，最终以 4 比 3 逆转局面，卫冕冠军。巴黎奥运会，唯一一个从开幕式打到闭幕式的运动员，搭档王楚钦拿下国乒首个混双金牌，还获得了女单银牌和女团金牌，在闭幕式时作为亚洲代表吹灭圣火。
+				<br/><br/>
+				<img src="img/2_22.jpg" style="margin-left:55px;"/ >
+				<img src="img/2_23.jpg" />
+				<img src="img/2_24.jpg" style="margin-left:55px;"/ >
+				<img src="img/2_25.jpg" />
+			</p>
+			<p class="p15">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9月参加澳门冠军赛获得女单冠军，14天后参加北京大满贯赛获得女单冠军与女双亚军，至此孙颖莎的单打世界排名积分已达到10800分，在新的排名规则下积分破万的第一人。
+				<br/><br/>
+				<img src="img/2_26.jpg" style="margin-left:205px;"/>
+			</p>
+			<a href="王楚钦个人介绍.html" title="点击前往王楚钦个人介绍"><p class="p16">
+			点击前往王楚钦个人介绍
+			</p></a>
+		</div>
+		</div>
+		<div class="return">
+			<a href="首页.html" title="点击回到首页"><img src="img/返回首页.png"></a>
+		</div>
+	</body>
+</html>

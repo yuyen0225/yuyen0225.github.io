@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>球迷寄语</title>
+		<link rel="icon" type="image/-icon" href="img/图标.ico"/>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				background: linear-gradient(270deg, #bc4623, #004d8c);
+			}
+			.main{
+				width: 1296px;
+				height: 392px;
+				box-sizing: border-box;
+				margin-top: 146px;
+				margin-left: 20px;
+				 transform: scale(1.1);
+				    transform-origin: top left;
+			}
+			.five,.one1,.one2,.four{
+				width: 324px;
+				height: 392px;
+				box-sizing: border-box;
+				float: left;
+				position: relative;
+				transform: scale(1.2);
+				   transform-origin: top left;
+			}
+			.five ul,.one1 ul,.one2 ul,.four ul{
+				list-style: none;
+			}
+			ul{
+				padding: 0;
+			}
+			/* ul:hover li{
+				opacity: 0.05;
+				} */
+			ul li:hover {
+				opacity: 1;
+				position: relative;
+				z-index: 999;
+				}
+			ul li:hover img{
+			transform: scale(2);
+			}
+			
+			
+		/* 数字5部分 */
+			/* 横线 */
+			.hengxian1{
+				width: 254px;
+				height: 36px;
+				box-sizing: border-box;
+				margin:37px 37px 0 33px;
+				background-color: white;
+			}
+			.hengxian1 li img, .hengxian2 li img, .hengxian3 li img{
+				width:114px;
+				height:36px;
+				transition: transform 0.5s ease;
+			}
+			.hengxian1 li, .hengxian2 li, .hengxian3 li{
+				float: left;
+				width:70px;
+				height:36px;
+				position: relative;
+				z-index: 2;
+			}
+			/* 左竖 */
+			.left{
+				width: 96px;
+				height: 106px;
+				box-sizing: border-box;
+				position: absolute;
+				left:33px;
+				top: 73px;
+				margin: 0;
+				background-color: white;
+			}
+			.left li img{
+				width:96px;
+				height:36px;
+				transition: transform 0.3s ease;
+			}
+			.left li{
+				width:60px;
+				height:34.5px;
+				z-index: 1;
+			}
+			/* 中间横 */
+			.hengxian2{
+				width: 254px;
+				height: 36px;
+				box-sizing: border-box;
+				position: absolute;
+				left: 33px;
+				top:179px;
+				margin: 0;
+				background-color: white;
+				}
+			/* 右竖 */
+			.right{
+				width: 96px;
+				height: 109px;
+				box-sizing: border-box;
+				position: absolute;
+				left:191px;
+				top: 215px;
+				margin: 0;
+				background-color: white;
+			}
+			.right li img{
+				width:96px;
+				height:36px;
+				transition: transform 0.5s ease;
+			}
+			.right li{
+				width:60px;
+				height:34.5px;
+				z-index: 1;
+			}
+			/* 底横 */
+			.hengxian3{
+				width: 254px;
+				height: 36px;
+				box-sizing: border-box;
+				position: absolute;
+				left: 33px;
+				top:324px;
+				margin: 0;
+				background-color: white;
+				}
+		/* 数字1部分 */
+			/* 横线 */
+			.henggang{
+				width: 155px;
+				height: 36px;
+				box-sizing: border-box;
+				position: absolute;
+				left:70px;
+				top: 37px;
+				margin: 0;
+				background-color: white;
+				}
+				.henggang li img{
+					width:82px;
+					height:36px;
+					transition: transform 0.5s ease;
+				}
+				.henggang li{
+					float: left;
+					width:20px;
+					height:36px;
+					z-index: 2;
+				}
+			/* 竖线 */
+				.shu{
+					width: 96px;
+					height: 252px;
+					box-sizing: border-box;
+					position: absolute;
+					left:129px;
+					top: 73px;
+					margin: 0;
+					background-color: white;
+				}
+				.shu li img{
+					width:96px;
+					height:36px;
+					transition: transform 0.5s ease;
+				}
+				.shu li{
+					width:60px;
+					height:30.75px;
+					z-index: 1;
+				}
+			/* 底横线 */
+			#o,#n{
+				width: 216px;
+				left:70px;
+				top: 325px;
+			}
+			.henggang li{
+				float: left;
+				width:36.5px;
+				height:36px;
+				z-index: 2;
+			}
+			#o li,#n li{
+				width:44.5px;
+			}
+		/* 数字4部分 */
+		/* 左竖 */
+		.leftshu{
+			width: 96px;
+			height: 109px;
+			box-sizing: border-box;
+			position: absolute;
+			left:38px;
+			top: 106px;
+			margin: 0;
+			background-color: white;
+		}
+		.leftshu li img{
+			width:96px;
+			height:35px;
+			transition: transform 0.5s ease;
+		}
+		.leftshu li{
+			width:22px;
+			height:24.7px;
+			z-index: 1;
+		}
+		/* 右竖上 */
+		.rightup{
+			width: 96px;
+			height: 142px;
+			box-sizing: border-box;
+			position: absolute;
+			left:175px;
+			top: 37px;
+			margin: 0;
+			background-color:white;
+		}
+		.rightup li img{
+			width:96px;
+			height:35px;
+			transition: transform 0.5s ease;
+		}
+		.rightup li{
+			width:22px;
+			height:26.6px;
+			z-index: 1;
+		}
+		/* 横线 */
+		.hengzhong{
+			width: 161px;
+			height: 36px;
+			box-sizing: border-box;
+			position: absolute;
+			left:134px;
+			top: 179px;
+			margin: 0;
+			background-color:white;
+			}
+		.hengzhong li img{
+			width:82px;
+			height:36px;
+			transition: transform 0.5s ease;
+			}
+		.hengzhong li{
+			float: left;
+			width:39.4px;
+			height:36px;
+			z-index: 2;
+			}
+		/* 右竖下 */
+		.rightdown{
+			width: 96px;
+			height: 109px;
+			box-sizing: border-box;
+			position: absolute;
+			left:175px;
+			top: 215px;
+			margin: 0;
+			background-color:white;
+		}
+		.rightdown li img{
+			width:96px;
+			height:35px;
+			transition: transform 0.5s ease;
+		}
+		.rightdown li{
+			width:22px;
+			height:24.6px;
+			z-index: 1;
+		}
+		/* 横线底 */
+		.bottom{
+			width: 140px;
+			height: 36px;
+			box-sizing: border-box;
+			position: absolute;
+			right: 32px;
+			top: 324px;
+			margin: 0;
+			background-color:white;
+			}
+		.bottom li img{
+			width:82px;
+			height:36px;
+			transition: transform 0.5s ease;
+			}
+		.bottom li{
+			float: left;
+			width:28.9px;
+			height:36px;
+			z-index: 2;
+			}
+			/* 文字和表单 */
+			h1{
+				font-family: "微软雅黑";
+				color: #fff;
+				font-weight: 600;
+				font-size: 50px;
+				position: absolute;
+				top: -10px;
+				left: 50px;
+			}
+			p{
+				font-family: "微软雅黑";
+				color: #fff;
+			}
+			.biaodan{
+				position: absolute;
+				top: 45px;
+				left: 400px;
+				border: 4px solid rgba(255, 255, 255, 0.5);
+				border-radius: 40px;
+				width: 700px;
+				padding: 5px 0px 5px 40px;
+				background-color: rgba(255, 255, 255, 0.2);
+			}
+			textarea{
+				width: 250px;
+				resize: none;
+				position: absolute;
+				top: 18px;
+				word-wrap: break-word;
+				font-family: "微软雅黑";
+			}
+			#jiyu{
+				position: absolute;
+				top: 20px;
+				left: 620px;
+			}
+			#username{
+				width: 80px;
+				margin-right: 20px;
+			}
+			input,textarea{
+				outline: none;
+				border: 3px solid rgba(255, 255, 255, 0.5);
+				border-radius: 5px;
+				background-color: rgba(255, 255, 255, 0.5);
+				color: #fff;
+				font-size: 15px;
+			}
+			
+			textarea:-ms-input-placeholder {
+			  color: #fff;
+			}
+			input:hover,textarea:hover{
+				border:3px solid #004d8c;
+			}
+			input:focus,textarea:focus{
+				border: 3px solid #bc4623;
+			}
+            /* 音乐 */
+            .song{
+                position: absolute;
+                bottom: 10px;
+                left: 60px;
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+                border: 1px solid #fff;
+                border-radius: 20px;
+                background-color: #fff;
+            }
+            .song audio{
+                margin-left: -6.5px;
+                margin-top: -6.5px;
+            }
+            /* 返回首页 */
+            .return {
+            	position:fixed;
+            	height: 60px;
+            	width: 100px;
+            	top: 600px;
+            	right: 0px;
+            	/* border: 2px outset #681616; */
+            	border-radius: 40px 0 0 40px;
+            	font-size: 20px;
+            	font-weight: 200;
+            	overflow: hidden;
+            	background-color: rgba(0, 0, 0, 1);
+            	text-indent: 0.5em;
+            	transition: all 0.5s;
+            }
+            .return img{
+            	margin: 0px 0 0 -15px;
+            	width: 110.5px;
+            }
+		</style>
+	</head>
+	
+	
+	<body>
+		<h1>球迷寄语</h1>
+		<div class="biaodan">
+			<form name="球迷寄语" action="http://baidu.com" method="get">
+			<p><label for="username">ID：</label><input type="text" id="username" name="username" />
+			<label for="text">想对莎头说的话：</label><textarea name="text" rows="1" id="text" ></textarea>
+			<input type="button" value="发送" id="jiyu" onClick="alert('提交成功!')"/></p>
+			</form>
+		</div>
+		<div class="main">
+			<!-- 数字5部分 -->
+			<div class="five">
+				<ul class="hengxian1">
+					<li><img src="img/1.jpg"/></li>
+					<li><img src="img/2.jpg"/></li>
+					<li><img src="img/3.jpg"/></li>
+				</ul>
+				<ul class="left">
+					<li><img src="img/4.jpg"/></li>
+					<li><img src="img/5.jpg"/></li>
+					<li><img src="img/6.jpg"/></li>
+				</ul>
+				<ul class="hengxian2">
+					<li><img src="img/7.jpg"/></li>
+					<li><img src="img/8.jpg"/></li>
+					<li><img src="img/9.jpg"/></li>
+				</ul>
+				<ul class="right">
+					<li><img src="img/10.jpg"/></li></li>
+					<li><img src="img/11.jpg"/></li></li>
+					<li><img src="img/12.jpg"/></li></li>
+				</ul>
+				<ul class="hengxian3">
+					<li><img src="img/13.jpg"/></li>
+					<li><img src="img/14.jpg"/></li>
+					<li><img src="img/15.jpg"/></li>
+				</ul>
+			</div>
+			<!-- 数字1.1部分 -->
+			<div class="one1">
+				<ul class="henggang">
+					<li><img src="img/16.jpg"/></li>
+					<li><img src="img/17.jpg"/></li>
+					<li><img src="img/18.jpg"/></li>
+				</ul>
+				<ul class="shu">
+					<li><img src="img/20.jpg"/></li>
+					<li><img src="img/21.jpg"/></li>
+					<li><img src="img/22.jpg"/></li>
+					<li><img src="img/23.jpg"/></li>
+					<li><img src="img/24.jpg"/></li>
+					<li><img src="img/25.jpg"/></li>
+					<li><img src="img/26.jpg"/></li>
+					<li><img src="img/27.jpg"/></li>
+				</ul>
+				<ul class="henggang" id="o">
+					<li><img src="img/28.jpg"/></li>
+					<li><img src="img/30.jpg"/></li>
+					<li><img src="img/31.jpg"/></li>
+					<li><img src="img/32.jpg"/></li>
+				</ul>
+			</div>
+			<!-- 数字1.2部分 -->
+			<div class="one2">
+			<ul class="henggang">
+				<li><img src="img/33.jpg"/></li>
+				<li><img src="img/34.jpg"/></li>
+				<li><img src="img/35.jpg"/></li>
+			</ul>
+			<ul class="shu">
+				<li><img src="img/36.jpg"/></li>
+				<li><img src="img/37.jpg"/></li>
+				<li><img src="img/38.jpg"/></li>
+				<li><img src="img/39.jpg"/></li>
+				<li><img src="img/40.jpg"/></li>
+				<li><img src="img/41.jpg"/></li>
+				<li><img src="img/42.jpg"/></li>
+				<li><img src="img/43.jpg"/></li>
+			</ul>
+			<ul class="henggang" id="n">
+				<li><img src="img/44.jpg"/></li>
+				<li><img src="img/45.jpg"/></li>
+				<li><img src="img/46.jpg"/></li>
+				<li><img src="img/47.jpg"/></li>
+			</ul>
+			</div>
+			<!-- 数字4部分 -->
+			<div class="four">
+				<ul class="leftshu">
+					<li><img src="img/48.jpg"/></li>
+					<li><img src="img/49.jpg"/></li>
+					<li><img src="img/50.jpg"/></li>
+					<li><img src="img/51.jpg"/></li>
+				</ul>
+				<ul class="rightup">
+					<li><img src="img/52.jpg"/></li>
+					<li><img src="img/53.jpg"/></li>
+					<li><img src="img/54.jpg"/></li>
+					<li><img src="img/55.jpg"/></li>
+					<li><img src="img/56.jpg"/></li>
+					</ul>
+				<ul class="hengzhong">
+					<li><img src="img/55.jpg"/></li>
+					<li><img src="img/56.jpg"/></li>
+					<li><img src="img/57.jpg"/></li>
+				</ul>
+				<ul class="rightdown">
+					<li><img src="img/58.jpg"/></li>
+					<li><img src="img/59.jpg"/></li>
+					<li><img src="img/60.jpg"/></li>
+					<li><img src="img/61.jpg"/></li>
+				</ul>
+				<ul class="bottom">
+					<li><img src="img/62.jpg"/></li>
+					<li><img src="img/63.jpg"/></li>
+					<li><img src="img/64.jpg"/></li>
+				</ul>
+			</div>
+		</div>
+            <div class="song" title="点击播放音乐">
+			<audio controls autoplay loop >
+				<source src="img/路过人间的情书final2.mp3" type="audio/mp3"/>
+				你的浏览器不支持audio!
+			</audio>
+		</div>
+        <div class="return">
+        	<a href="首页.html" title="点击回到首页"><img src="img/返回首页.png"></a>
+        </div>
+	</body>
+</html>

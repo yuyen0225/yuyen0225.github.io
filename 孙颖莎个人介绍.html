@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>孙颖莎 个人介绍</title>
+		<link rel="icon" type="image/-icon" href="img/图标.ico"/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			p{
+				transition: all 1s;
+			}
+			p:hover{
+				transform: scale(1.05);
+			}
+			
+			/* 简单介绍部分始 */
+			.top {
+				position: relative;
+				width: 100%;
+				height: 850px;
+				background: linear-gradient(#4d1010,#000);
+			}
+
+			/* 乒乓球桌 */
+			.desk {
+				margin-top: 20px;
+				position: absolute;
+				left: 49.5%;
+				width: 1359px;
+				height: 800px;
+				background: url(img/红色乒乓球桌.png) no-repeat;
+				transform: translate(-50%, 0);
+				color: white;
+				font: 600 35px "微软雅黑";
+			}
+
+			/* 左上角区域 */
+			.gerenjiashao {
+				position: absolute;
+				left: 2%;
+				top: 4%;
+				display: flex;
+				align-items: center;
+				width: 400px;
+				height: 320px;
+			}
+
+			.zi {
+				writing-mode: vertical-rl;
+				font-weight: 1000;
+				font-size: 80px;
+				margin-right: 100px;
+			}
+
+			.gongshizhao {
+				width:278.45px;	
+				height:325.6px;
+				position: absolute;
+				left: 210px;
+				top: 19px;
+			}
+
+			.gongshizhao img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: all 1s;
+			}
+			.gongshizhao img:hover{
+				transform: translateY(-5px);
+			}
+
+			/* 右上区域 */
+			.jieshao {
+				position: absolute;
+				left: 58%;
+				top: 12%;
+			}
+
+			/* 左下区域 */
+			.shenfen {
+				position: absolute;
+				left: 10%;
+				top: 60%;
+				text-align: center;
+			}
+
+			/* 右下区域 */
+			.yuanxiao {
+				position: absolute;
+				left: 58%;
+				top: 60%;
+			}
+			
+			.qiupai {
+				width: 299px;
+				height: 241px;
+				position: absolute;
+				left: 82.5%;
+				top: 70%;
+				transform: scale(1.1);
+				font-size: 25px;
+				color: #ffd900;
+				background: url(img/乒乓球加球拍.png) no-repeat;
+				line-height: 245px;
+				text-align: center;
+				text-indent: 40px;
+				transition: all 0.5s;
+			}
+
+			.qiupai:hover {
+				transform: translate(0px, -5px);
+			}
+
+			/* 简单介绍部分终 */
+			/* 返回首页 */
+			.return {
+				position:fixed;
+				height: 60px;
+				width: 100px;
+				top: 600px;
+				right: 0px;
+				/* border: 2px outset #681616; */
+				border-radius: 40px 0 0 40px;
+				font-size: 20px;
+				font-weight: 200;
+				overflow: hidden;
+				background-color: rgba(0, 0, 0, 1);
+				text-indent: 0.5em;
+				transition: all 0.5s;
+			}
+			.return img{
+				margin: 0px 0 0 -15px;
+				width: 110.5px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 简单介绍部分 -->
+		<div class="top">
+			<div class="desk">
+				<!-- 左上 -->
+				<div class="gerenjiashao">
+					<div class="zi">
+						<p>个人介绍</p>
+					</div>
+					<div class="gongshizhao">
+						<img src="img/公式照1透明底1.png" />
+					</div>
+				</div>
+				<!-- 右上 -->
+				<div class="jieshao">
+					<p>姓名：孙颖莎</p>
+					<p>性别：女</p>
+					<p>别名：莎莎、小魔王、小豆包</p>
+					<p>出生日期：2000 年11月4日</p>
+					<p>出生地：河北省石家庄市</p>
+				</div>
+				<!-- 左下 -->
+				<div class="shenfen">
+					<p>国际级运动健将</p>
+					<p>中国女子乒乓球运动员</p>
+				</div>
+				<!-- 右下 -->
+				<div class="yuanxiao">
+					<p>所在院校：上海交通大学</p>
+					<p>专业特点：右手横拍快攻结合<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						弧圈打法</p>
+				</div>
+				<a href="孙颖莎个人经历.html" title="孙颖莎个人经历">
+					<div class="qiupai">
+						回望来时路
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- 简单介绍部分结束 -->
+<div class="return">
+				<a href="首页.html" title="点击回到首页"><img src="img/返回首页.png"></a>
+			</div>
+	</body>
+</html>

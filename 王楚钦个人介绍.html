@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>王楚钦 个人介绍</title>
+		<link rel="icon" type="image/-icon" href="img/图标.ico"/>
+		<style>
+				* {
+					margin: 0;
+					padding: 0;
+				}
+				p{
+					transition: all 1s;
+				}
+				p:hover{
+					transform: scale(1.05);
+				}
+		
+				/* 简单介绍部分始 */
+				.top {
+					position: relative;
+					width: 100%;
+					height: 850px;
+					background: linear-gradient(#0d234d,#000);
+				}
+		
+				/* 乒乓球桌 */
+				.desk {
+					margin-top: 20px;
+					position: absolute;
+					left: 49.5%;
+					width: 1359px;
+					height: 800px;
+					background: url(img/乒乓球桌.png) no-repeat;
+					background-size: contain;
+					transform: translate(-50%, 0);
+					color: white;
+					font: 600 35px "微软雅黑";
+				}
+		
+				/* 左上角区域 */
+				.gerenjiashao {
+					position: absolute;
+					right: 2%;
+					top: 4%;
+					display: flex;
+					width: 120px;
+					height: 320px;
+				}
+		
+				.zi {
+					writing-mode: vertical-rl;
+					font-weight: 1000;
+					font-size: 80px;
+					margin-right: 100px;
+					text-align: right;
+				}
+		
+				.gongshizhao {
+					width:278.45px;
+					height:325.6px;
+					position: absolute;
+					right: 210px;
+					top: 19px;
+				}
+		
+				.gongshizhao img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				transition: all 1s;
+				}
+				
+				.gongshizhao img:hover{
+					transform: translateY(-5px);
+				}
+				
+				/* 右上区域 */
+				.jieshao {
+					position: absolute;
+					right: 58%;
+					top: 12%;
+				}
+		
+				/* 左下区域 */
+				.shenfen {
+					position: absolute;
+					right: 10%;
+					top: 60%;
+					text-align: center;
+				}
+		
+				/* 右下区域 */
+				.yuanxiao {
+					position: absolute;
+					right: 58%;
+					top: 60%;
+				}
+		
+				.qiupai {
+					width: 299px;
+					height: 241px;
+					position: absolute;
+					right: 82.5%;
+					top: 70%;
+					transform: scale(1.1);
+					font-size: 25px;
+					color: #ffd900;
+					line-height: 250px;
+					text-align: left;
+					text-indent: 60px;
+					transition: all 0.5s;
+				}
+			.qiupai::after {
+		    content: ''; 
+		    position: absolute; 
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background-image: url('img/乒乓球加球拍.png'); 
+		    background-size: cover; 
+		    transform: scaleX(-1); 
+		    z-index: -1; 
+		  }
+				.qiupai:hover {
+					transform: translate(0px, -5px);
+				}
+		
+				/* 简单介绍部分终 */
+                /* 返回首页 */
+                .return {
+                	position:fixed;
+                	height: 60px;
+                	width: 100px;
+                	top: 600px;
+                	right: 0px;
+                	/* border: 2px outset #681616; */
+                	border-radius: 40px 0 0 40px;
+                	font-size: 20px;
+                	font-weight: 200;
+                	overflow: hidden;
+                	background-color: rgba(0, 0, 0, 1);
+                	text-indent: 0.5em;
+                	transition: all 0.5s;
+                }
+                .return img{
+                	margin: 0px 0 0 -15px;
+                	width: 110.5px;
+                }
+			</style>
+		</head>
+		<body>
+			<!-- 简单介绍部分 -->
+			<div class="top">
+				<div class="desk">
+					<!-- 左上 -->
+					<div class="gerenjiashao">
+						<div class="zi">
+							<p>个人介绍</p>
+						</div>
+						<div class="gongshizhao">
+							<img src="img/公式照2透明底1.png" />
+						</div>
+					</div>
+					<!-- 右上 -->
+					<div class="jieshao">
+						<p>姓名：王楚钦</p>
+						<p>性别：男</p>
+						<p>别名：大头、头头</p>
+						<p>出生日期：2000 年5月11日</p>
+						<p>出生地：吉林省吉林市</p>
+					</div>
+					<!-- 左下 -->
+					<div class="shenfen">
+						<p>国际级运动健将</p>
+						<p>中国男子乒乓球运动员</p>
+					</div>
+					<!-- 右下 -->
+					<div class="yuanxiao">
+						<p>所在院校：北京体育大学</p>
+						<p>专业特点：左手横板弧圈结合<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							快攻打法</p>
+					</div>
+					<a href="王楚钦个人经历.html" title="王楚钦个人经历">
+						<div class="qiupai">
+							回望来时路
+						</div>
+					</a>
+				</div>
+			</div>
+			<!-- 简单介绍部分结束 -->
+            <div class="return">
+            	<a href="首页.html" title="点击回到首页"><img src="img/返回首页.png"></a>
+            </div>
+	</body>
+</html>

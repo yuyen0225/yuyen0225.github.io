@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>王楚钦 个人经历</title>
+		<link rel="icon" type="image/-icon" href="img/图标.ico"/>
+		<style>
+				.all {
+				    width: 100%;
+				    height: 100%;
+				    display: flex;
+				    overflow-x: hidden;
+				    font-family: "微软雅黑";
+				}
+				.main {
+				    position: absolute;
+				    top: 0;
+				    left: 50%;
+				    transform: translate(-50%, 0);
+				    width: 700px;
+				    height: 8068px;
+					
+				    &::before {
+				        content: "";
+				        position: absolute;
+				        inset: 0 -30vw;
+				        background: linear-gradient(#000, #2258bc, #162c68);
+				    }
+				}
+				/* 线和箭头 */
+				.xianhejiantou {
+				    position: absolute;
+				    top: 0;
+				    left: 50%;
+				    width: 700px;
+				    height:8030px;
+				    transform: translate(-50%, 0);
+				}
+				#xian {
+				    stroke-dasharray: 9850, 9850;
+				    animation: lineMove 3s linear;
+				    animation-timeline: scroll(root);
+				    stroke-width: 2px;
+				    stroke: #2151ff;
+					position: absolute;
+					z-index: 5;
+				}
+				@keyframes lineMove {
+				    0% {
+				        stroke-dashoffset: 9850;
+				    }
+				    100% {
+				        stroke-dashoffset: 0;
+				    }
+				}
+				.jiantou {
+				    position: absolute;
+				    width: 40px;
+				    height: 40px;
+				    clip-path: polygon(0 0, 100% 50%, 0 100%);
+				    offset-path: path("M 350 40 C 1200 1000, -550 1000, 350 1960 c 900 1000, -900 1000, 0 1960 c 720 800, -1050 400, 0 1960 c 900 1000, -1100 800, 0 1360 q 640 320, -200 800");
+				    background: linear-gradient(270deg, #484848, #2075ff);
+				    animation: move 1s linear;
+				    animation-timeline: scroll(root);
+				    z-index: 10;
+				}
+				@keyframes move {
+				    0% {
+				        offset-distance: 0%;
+				    }
+				    50% {
+				        transform: scale(2.5);
+				    }
+				    100% {
+				        offset-distance: 100%;
+				    }
+				}
+				/* 发光圆圈 */
+				.point {
+				    position: absolute;
+				    width: 40px;
+				    height: 40px;
+				    border-radius: 50%;
+				    background: #2264ff;
+				    opacity: 0;
+				    animation: show 1s linear forwards;
+				    animation-timeline: scroll(root);
+				    &::before, &::after {
+				        content: "";
+				        position: absolute;
+				        inset: 0;
+				        border-radius: 50%;
+				        background: rgba(255, 255, 255, .5);
+				        animation: circleScale 2s infinite ease-in;
+				        z-index: -1;
+				    }
+				    &::after {
+				        animation-delay: -.5s;
+				    }
+				}
+				@keyframes show {
+				    0% {
+				        opacity: 0;
+				    }
+				    100% {
+				        opacity: 1;
+				    }
+				}
+				@keyframes circleScale {
+				    80%,
+				    100% {
+				        transform: scale(4);
+				        opacity: 0.1;
+				    }
+				}
+				.point1 {
+				    top: 510px;
+				    left: 570px;
+				    animation-range: 150px 200px;
+				}
+				.point2 {
+				    top: 940px;
+				    left: 345px;
+				    animation-range: 400px 450px;
+				}
+				.point3 {
+				    top: 1410px;
+				    left: 66px;
+				     animation-range: 700px 800px;
+				}
+				.point4 {
+				    top: 1900px;
+				    left: 290px;
+				   animation-range: 1250px 1350px;
+				}
+				.point5 {
+				    top: 2510px;
+				    left: 585px;
+				    animation-range: 1750px 1850px;
+				}
+				.point6 {
+				    top:3050px;
+				    left: 230px;
+				    animation-range: 2350px 2450px;
+				}
+				.point7 {
+				    top: 3550px;
+				    left: 97px;
+				    animation-range: 2850px 2950px;
+				}
+				.point8 {
+				    top: 4300px;
+				    left: 495px;
+				    animation-range: 3600px 3700px;
+				}
+				.point9 {
+				    top: 4800px;
+				    left: 40px;
+				    animation-range: 4000px 4100px;
+				}
+				.point10 {
+				    top: 5350px;
+				    left: 53.5px;
+				    animation-range: 4650px 4750px;
+				}
+				.point11 {
+					top: 6400px;
+					left: 560px;
+					animation-range: 5700px 5800px;
+				}
+				.point12 {
+				    top: 6930px;
+				    left: -7.5px;
+				    animation-range: 6250px 6350px;
+				}
+				.point13 {
+				  top: 7530px;
+				  left:606px;
+				  animation-range: 6850px 6950px;
+				}
+                .point14 {
+                  top: 7960px;
+                  left:230px;
+                  animation-range: 7250px 7350px;
+                }
+				/* 字和框 */
+				h2 {
+				    position: absolute;
+				    left: 0;
+				    right: 0;
+				    text-align: center;
+				    top: 100px;
+				    font-size: 42px;
+				    color: #fff;  
+				}
+				p {
+				    position: absolute;
+				    padding: 16px;
+				    border: 4px dashed #fff;
+				    width: 50vw;
+				    color: #fff;
+				    font-size: 24px;
+				    text-align: center;
+					font-weight: 600;
+					text-indent: 2em;
+				    opacity: 0;
+				    animation: textShow 5s linear forwards;
+				    animation-timeline: scroll(root);
+				}
+				@keyframes textShow {
+				    0% {
+				        transform: translate(var(--x), 0);
+				        opacity: 0;
+				    }
+				    100% {
+				        transform: translate(0, 0);
+				        opacity: 1;
+				    }
+				}
+				
+				.p1 {
+				    --x: -500px;
+				    top: 410px;
+				    left: 60px;
+				    width: 400px;
+				    animation-range: 150px 200px;
+					text-indent: 10px;
+				}
+				.p2 {
+				    --x: -150px;
+				    width: 500px;
+				    top: 880px;
+				    left: 300px;
+				    animation-range: 350px 450px;
+					text-indent: 0;
+				}
+				/* 为穿过框的线让位 */
+				.p2::before {
+				    content: "";
+				    float: left;
+				    width: 240px;
+				    height: 200px;
+				    shape-outside: polygon(40% 0, 50% 0, 0 90%, 0 80%);
+				}
+				.p3 {
+				    --x: 500px;
+				    top: 1350px;
+				    left: 190px;
+				    width: 480px;
+				    animation-range: 700px 800px;
+				}
+				.p4{
+					--x: -700px;
+					width: 500px;
+					top: 1850px;
+					left: -180px;
+					animation-range: 1150px 1250px;
+					text-align: left;
+				}
+				.p4::before {
+				    content: "";
+				    float: right;
+				    width: 200px;
+				    height: 100px;
+				    shape-outside: polygon(40% 0, 50% 0, 100% 90%, 100% 100%);
+				}
+				.p5{
+					--x: -500px;
+					top: 2440px;
+					left: -100px;
+					width:700px;
+					animation-range: 1700px 1800px;
+					text-align: left;
+				}
+				.p5::before {
+				    content: "";
+				    float: right;
+				    width: 200px;
+				    height: 100px;
+				    shape-outside: polygon(80% 0%, 90% 0%, 50% 100%, 40% 100%);
+				}
+				.p6{
+					--x: 1000px;
+					top: 3000px;
+					left: 350px;
+					width: 650px;
+					animation-range: 2300px 2400px;
+					text-align: left;
+				}
+				.p7{
+					--x: 700px;
+					width: 600px;
+					top: 3550px;
+					left: 250px;
+					animation-range: 2900px 3000px;
+					text-align: left;
+				}
+				.p7::before{
+					content: "";
+					float: left;
+					width: 200px;
+					height: 420px;
+					shape-outside: polygon(50% 100%, 70% 100%, 0% 80%, 0% 90%);
+				}
+				.p8{
+					--x: -500px;
+					top: 4070px;
+					left: -250px;
+					width:650px;
+					animation-range: 3400px 3500px;
+					text-align: left;
+					}
+				.p9{
+					--x: 500px;
+					top: 4600px;
+					left: 180px;
+					width:800px;
+					animation-range: 3900px 4000px;
+					text-align: left;
+				}
+				.p10{
+					--x: 700px;
+					width: 710px;
+					top: 5150px;
+					left: 250px;
+					animation-range: 4600px 4700px;
+					text-align: left;
+				}
+				.p11{
+					--x: -500px;
+					top: 6150px;
+					left: -200px;
+					width:830px;
+					animation-range: 5600px 5700px;
+					text-align: left;
+				}
+				.p11::before{
+					content: "";
+					float: right;
+					width: 200px;
+					height: 420px;
+					shape-outside: polygon(45% 0%, 55% 0%, 80% 40%, 70% 40%);
+				}
+				.p12{
+					--x: 500px;
+					top: 6780px;
+					left: 280px;
+					width:650px;
+					animation-range: 6100px 6200px;
+					text-align: left;
+				}
+				.p13{
+					--x: -700px;
+					width: 600px;
+					top: 7320px;
+					left: -200px;
+					animation-range: 6800px 6900px;
+					text-align: left;
+				}
+				.p14{
+					--x: -700px;
+					width: 280px;
+					top: 7920px;
+					left: 625px;
+					animation-range: 7200px 7300px;
+                    text-indent: 0em;
+                    border: 4px solid #fff;
+                    border-radius: 40px;
+                    font-weight: 400;
+                    background-color: rgba(225, 225, 225, 0.5);
+				}
+                .p14_1{
+                	--x: -700px;
+                	width: 200px;
+                	top: 7920px;
+                	left: 350px;
+                	animation-range: 7200px 7300px;
+                    text-indent: 0em;
+                    border: 4px solid #fff;
+                    border-radius: 40px;
+                    font-weight: 400;
+                    background-color: rgba(225, 225, 225, 0.5);
+                }
+				.main p img{
+					width: 300px;
+				}
+                /* 返回首页 */
+                .return {
+                	position:fixed;
+                	height: 60px;
+                	width: 100px;
+                	top: 600px;
+                	right: 0px;
+                	/* border: 2px outset #681616; */
+                	border-radius: 40px 0 0 40px;
+                	font-size: 20px;
+                	font-weight: 200;
+                	overflow: hidden;
+                	background-color: rgba(0, 0, 0, 1);
+                	text-indent: 0.5em;
+                	transition: all 0.5s;
+                }
+                .return img{
+                	margin: 0px 0 0 -15px;
+                	width: 110.5px;
+                }
+			</style>
+		</head>
+		<body>
+			<div class="all">
+			<div class="main">
+			    <svg class="xianhejiantou" xmlns="http://www.w3.org/2000/svg">
+			        <path id="xian" d="M 350 40 C 1200 1000, -550 1000, 350 1960 
+					c 900 1000, -900 1000, 0 1960 
+					c 720 800, -1050 400, 0 1960 
+					c 900 1000, -1100 800, 0 1360 
+					q 640 320, -200 800
+					" stroke="black" fill="transparent" />
+			    </svg>
+			    <div class="jiantou"></div>
+				
+			    <div class="point point1"></div>
+			    <div class="point point2"></div>
+			    <div class="point point3"></div>
+				<div class="point point4"></div>
+				<div class="point point5"></div>
+				<div class="point point6"></div>
+				<div class="point point7"></div>
+				<div class="point point8"></div>
+				<div class="point point9"></div>
+				<div class="point point10"></div>
+				<div class="point point11"></div>
+				<div class="point point12"></div>
+				<div class="point point13"></div>
+                <div class="point point14"></div>
+            
+			    <h2>王楚钦个人经历</h2>
+			    <p class="p1">
+				5 岁为强身健体，开始学习乒乓球。
+				<br/><br/>
+				<img src="img/2_27.jpg"/>
+			    </p>
+			    <p class="p2">
+				10岁进入北京先农坛体校。<br/><br/>
+				<img src="img/2_28.jpg"/>
+			    </p>
+			    <p class="p3">
+				2014年获全国少年乒乓球锦标赛男单冠军和全国青少年乒乓球锦标赛男单男团双冠军，成功拿到双门票且年龄符合进入国家队。
+				<br/><br/>
+				<img src="img/2_29.jpg" />
+			    </p>
+				<p class="p4">
+				2015年全锦赛挺进八强成为首个进入全锦八强的00后选手，且一二队队内升降级比赛成绩满足入一队规则，凭两张门票进入一队。
+				<br /><br />
+				<img src="img/2_30.jpg" style="margin-left: 90px;"/>
+				</p>
+				<p class="p5">
+				2017年获得亚青赛男单混双男团三冠、全运会铜牌、世青赛男双男团冠军、中国青少年公开赛男单男团双冠，曾在今年创造一天八场比赛的记录。				<br/><br/>
+				<img src="img/2_31.jpg"/>
+				<img src="img/2_32.jpg"/>
+				</p>
+				<p class="p6">
+					2018年获得青奥会单打和混合团体金牌、亚运会混双和男团金牌、全锦赛混双和男团金牌;通过队内循环赛规则拿到门票参加瑞典世乒赛，成为乒乓球国家队第一个00后世界冠军，也是世界男线第一且唯一的世界冠军。
+					<br/><br/>
+				<img src="img/2_33.jpg" style="margin-left: 20px;" />
+				<img src="img/2_34.jpg" />
+				</p>
+				<p class="p7">
+					2019年报名布达佩斯世乒赛男双单项，龙头初次国际亮相就斩获伊朗杯，拿到第一个单项世界冠军，成为最年轻的伊朗杯获得者;参加瑞典公开赛获得男单冠军。
+					<br/><br/>
+					<img src="img/2_35.jpg" />
+				</p>
+				<p class="p8">
+				2021年参加全运会拿到男双冠军和男团亚军，龙头组合成为国际国内男双最高奖项的唯一获得者;参加wtt斯洛文尼亚站比赛获得混双冠军和男双亚军。
+				<br/><br/>
+				<img src="img/2_36.jpg" style="margin-left:170px;"/>
+				</p>
+				<p class="p9">
+					2022年参加wtt澳门之星赛拿到时隔840天的男单金牌，参加成都世乒赛首次上阵淘汰赛获得男团冠军，参加wtt澳门冠军赛和wtt新乡世界杯夺得背靠背男单金牌，参加wtt新加坡大满贯比赛获得混双和男双冠军、参加布达佩斯球星挑战赛获得男单和混双冠军。
+					<br/><br/>
+					<img src="img/2_37.jpg" style="margin-left:100px;"/ >
+					<img src="img/2_38.jpg" />
+				</p>
+				<p class="p10">
+					2023年获得新加坡大满贯男双混双冠军;获得德班世乒赛直通赛混双冠军、德班世乒赛队内选拔赛第二站男单和混双冠军，成功拿到男单和混双参赛门票;参加德班世乒赛获得男单亚军及男双混双双冠，一天三赛闯入男单决赛，成为本世纪第一位挺进决赛的左手，也是时隔三十年闯进决赛的左手;参加杭州亚运会获得男单、男双、混双和男团四项冠军成为亚运四冠王，兼赛四项突破自己成为亚运男线历史第一人;参加兰州球星挑战赛获得男单冠军;参加成都混合团体比赛获得团体冠军。
+					<br/><br/>
+					<img src="img/2_39.jpg" style="margin-left:50px;"/ >
+					<img src="img/2_40.jpg" />
+					<img src="img/2_41.jpg" style="margin-left:50px;"/ >
+					<img src="img/2_42.jpg" />
+				</p>
+				<p class="p11">
+					2024年获得多哈男子总决赛男单冠军、多哈球星挑战赛男单混双双冠和男双亚军、多哈常规挑战赛混双冠军、釜山世乒赛男团冠军、wtt新加坡大满贯男单混双冠军、男双亚军、澳门世界杯单打四强、成功入选巴黎单打混双团体名额、wtt沙特大满贯男单男双混双三冠王、重庆冠军赛男单亚军。
+					<br/><br/>
+					<img src="img/2_43.jpg" style="margin-left:45px;"/ >
+					<img src="img/2_44.jpg" />
+				</p>
+				<p class="p12">
+					巴黎奥运会搭档孙颖莎拿下国乒首个混双金牌，还获得了男团金牌，是历史上首位兼三项上奥运单打的左手将。
+					<br/><br/>
+					<img src="img/2_46.jpg" style="margin-left:30px;"/ >
+					<img src="img/2_47.jpg" />
+				</p>
+				<p class="p13">
+					11月WTT福冈总决赛男单冠军，实现了WTT总决赛男单三连冠。
+					<br/><br/>
+					<img src="img/2_48.jpg" style="margin-left:148px;"/>
+				</p>
+               <!-- <a href="孙颖莎个人介绍.html" title="点击前往孙颖莎个人介绍"><p class="p14">
+                    点击前往孙颖莎个人介绍
+                </p></a> -->
+                 <a href="混双经历首页.html" title=" 点击前往混双经历"><p class="p14_1">
+                    点击前往混双经历
+                </p></a>
+			</div>
+			</div>
+            <div class="return">
+            	<a href="首页.html" title="点击回到首页"><img src="img/返回首页.png"></a>
+            </div>
+	</body>
+</html>

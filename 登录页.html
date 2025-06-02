@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录页</title>
+		<link rel="stylesheet" type="text/css" href="css/登录页.css">
+		<link rel="icon" type="image/-icon" href="img/图标.ico"/>
+		<style>
+		*{
+			box-sizing:border-box;
+			margin:0;
+			padding:0;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container" id="container">
+			<div class="form-container sign-up-container">
+				<form name="biaodan" id="biaodan" action=首页.html method="post"><!-- 到时候要设置action跳转到首页 -->
+					<h1>Sign in</h1>
+					<input type="text" name="userman" required placeholder="Name"><br/>
+					<input type="password" name="pass" required placeholder="Password"><br/>
+					<button type="submit">一键进入</button>
+				</form>
+			</div>
+			<div class="form-container sign-in-container">
+				<form name="biaodan" id="biaodan" action=首页.html method="post" >
+					<h1>Sign in</h1>
+					<input type="text" name="userman" required placeholder="Name"><br/>
+					<input type="password" name="pass" required placeholder="Password"><br/>
+					<button type="submit">一键进入</button>
+				</form>
+			</div>
+			<div class="overlay-container">
+				<div class="overlay">
+					<div class="overlay-panel overlay-left">
+						<h1>欢迎来到“莎头世界”</h1>
+						<p>天选混双 非常好先生和天才少女</p>
+						<button class="ghost" id="signIp">5114</button>
+					</div>
+					<div class="overlay-panel overlay-right">
+						<h1>Hello “薯条派”</h1>
+						<p>谁敢横刀立马 唯我莎头将军</p>
+						<button class="ghost" id="signUp">5114</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			<footer>
+				<p>@莎头网页 版权所有:胡恩琪 施雨靖</p>
+			</footer>
+			<script>
+				const signUpButton = document.getElementById('signUp');
+				const signIpButton = document.getElementById('signIp');
+				const container = document.getElementById('container');
+				
+				signUpButton.addEventListener('click', ()=>{
+					container.classList.add("right-panel-active");
+				});
+				signIpButton.addEventListener('click', ()=>{
+					container.classList.remove("right-panel-active");
+				});
+			</script>
+		
+	</body>
+</html>
